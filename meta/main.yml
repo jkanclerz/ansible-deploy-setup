@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: Jakub Kanclerz
+  description: An Ansible for setup deploy project.
+  company: Jakub Kanclerz.
+  license: Apache
+  min_ansible_version: 1.8
+  platforms:
+  - name: Centos
+    versions:
+    - 6.4
+  categories:
+  - deployment
+dependencies: []

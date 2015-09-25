@@ -1,0 +1,17 @@
+---
+# tasks file for project setup
+- name: Register release variable
+  shell: date +%Y%m%d%H%M%S
+  register: project_deploy_date
+
+- name: Create the release directory.
+  file:
+    state=directory
+    path={{deploy.project.root}}/releases/{{project_deploy_date.stdout}}
+
+- name: Create the shared directory.
+  file:
+    state=directory
+    path={{deploy.project.root}}/shared
+
+
