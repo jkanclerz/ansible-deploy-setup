@@ -6,9 +6,9 @@ galaxy_info:
   license: Apache
   min_ansible_version: 1.8
   platforms:
-  - name: Centos
+  - name: Fedora
     versions:
-    - 6.4
+    - all
   categories:
   - deployment
 dependencies: []
