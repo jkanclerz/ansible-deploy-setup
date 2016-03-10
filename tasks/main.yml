@@ -1,4 +1,13 @@
 ---
+- name: Define variables.
+  set_fact:
+    project_owner: "{{ ansible_user }}"
+  when: project_owner is not defined
+
+- name: Define variables.
+  set_fact:
+    owner_group: "{{ ansible_user }}"
+  when: owner_group is not defined
 # tasks file for project setup
 - name: Register release variable
   shell: date +%Y%m%d%H%M%S
@@ -14,4 +23,5 @@
     state=directory
     path={{deploy.project.root}}/shared
 
-
+- name: Change owner
+  file: owner="{{project_owner}}" group="{{owner_group}}" recurse=yes dest="{{deploy.project.root}}"
