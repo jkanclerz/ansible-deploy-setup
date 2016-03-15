@@ -21,4 +21,4 @@
     path={{deploy.project.root}}/shared
 
 - name: Change owner
-  file: owner="{{project_owner}}" group="{{owner_group}}" recurse=yes dest="{{deploy.project.root}}"
+  file: owner="{{project_owner}}" group="{{owner_group}}" dest="{{deploy.project.root}}"
