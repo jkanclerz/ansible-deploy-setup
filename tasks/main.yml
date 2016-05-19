@@ -6,7 +6,7 @@
 
 - name: Define variables.
   set_fact:
-    owner_group: "{{ ansible_user }}"
+    owner_group: "{{ ansible_group }}"
   when: owner_group is not defined
 # tasks file for project setup
 
